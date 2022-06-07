@@ -1,0 +1,421 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>복사본</title>
+    <link rel="stylesheet" href="./style_9 copy.css">
+</head>
+<body>
+    <div class="container">
+        <!-- 헤더부분 -->
+        <header>
+            <div class="header">
+                <h1 id="logo">Hello World~🎈</h1>
+            </div>
+            <nav>
+              <ul class="menu">
+                <li><a href="#introduce">About Me</a></li>
+                <li><a href="#hobby">My favorites</a></li>
+                <li><a href="#roadmap">Dev Roadmap</a></li>
+                <li><a href="#signup">Sign up</a></li>
+                <li><a href="#memberlist">Member List</a></li>
+              </ul>
+            </nav>
+          </header>
+          
+          <!-- 사이드바 -->
+          <div id="mySidepanel" class="sidepanel">
+            <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+            <a href="#introduce">About Me</a>
+            <a href="#hobby">My favorites</a>
+            <a href="#roadmap">Roadmap</a>
+            <a href="#signup">Sign up</a>
+            <a href="#memberlist">Member List</a>
+          </div>          
+          <button class="openbtn" onclick="openNav()">&#9776;</button>
+          <script>
+            /* Set the width of the sidebar to 250px (show it) */
+            function openNav() {
+                document.getElementById("mySidepanel").style.width = "200px";
+            }
+              
+            /* Set the width of the sidebar to 0 (hide it) */
+            function closeNav() {
+              document.getElementById("mySidepanel").style.width = "0";
+            }
+          </script>
+          
+          <!-- 메인부분 -->
+          <main class="main"> 
+            <!-- 자기소개 -->
+            <div id="introduce">
+                <div id="introduceTitle">
+                    <h3>About me</h3>
+                </div>
+                <div id ="introduceContent">
+                    <div id="selfImg"><img src="./사진/KakaoTalk_20220511_140552788.jpg" alt="이윤정"></div>
+                    <div id="selfText">
+                        <p>Name : 이윤정</p><br>
+                        <p>Birth : 1992.11.04</p><br>
+                        <p>Phone : 010 - 6288 - 6048</p><br>
+                        <div class="skill" onmousemove="move();" >
+                              <p>Skill</p>
+                              <div>
+                                <span class="sk_name">Java</span>
+                                <div id="myProgress">
+                                  <div id="java"></div>
+                                </div>
+                              </div>
+                              <div>
+                                <span class="sk_name">HTML/CSS</span>
+                                <div id="myProgress">
+                                  <div id="html"></div>
+                                </div>
+                              </div>
+                              <div>
+                                <span class="sk_name">javascript</span>
+                                <div id="myProgress">
+                                  <div id="javascript"></div>
+                                </div>
+                              </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 취미소개 -->
+            <div id="hobby">
+                <div id="hobbyTitle">
+                    <h3>My Favorites</h3>
+                </div>
+
+                <div id="hobbyContent">
+                    <h3>🏃‍♀️운동🏃‍♀️</h3>
+                    <div class="run_text">
+                      <div>Running</div>
+                      <div>Hiking</div>
+                      <div>Crossfit</div>
+                    </div>
+
+                    <div id="h1">
+                      <div class="running"></div>
+                      <div class="hiking"></div>
+                      <div class="crossfit"></div>
+                    </div>
+
+                    <h3>🎬영화🎬</h3>
+                    <div id="h2">
+                      <div class="movie">
+
+                        <div class="box">                            
+                              <img src="./사진/영화/그래비티.png" alt="영화1">                           
+                            <div class="mv_info">
+                              <p>Gravity</p>
+                            </div>
+                        </div>
+
+                        <div class="box">
+                            <img src="./사진/영화/너를사랑할수없는10가지이유.png" alt="영화2">
+                          <div class="mv_info">
+                            <p>너를사랑할수없는 10가지이유</p>
+                          </div>
+                        </div>
+
+                        <div class="box">
+                          <img src="./사진/영화/듄.png" alt="영화3">
+                          <div class="mv_info">
+                            <p>Dune</p>
+                          </div>
+                        </div>
+
+
+                        <div class="box">
+                          <img src="./사진/영화/배트맨.png" alt="영화4">
+                          <div class="mv_info">
+                            <p>배트맨 시리즈</p>
+                          </div>
+                        </div>
+
+
+                        <div class="box">
+                          <img src="./사진/영화/빅쇼트.png" alt="영화5">
+                          <div class="mv_info">
+                            <p>빅쇼트</p>
+                          </div>
+                        </div>
+
+
+                        <div class="box">
+                          <img src="./사진/영화/소울.png" alt="영화6">
+                          <div class="mv_info">
+                            <p>Soul</p>
+                          </div>
+                        </div>
+
+
+                        <div class="box">
+                          <img src="./사진/영화/월E.png" alt="영화7">
+                          <div class="mv_info">
+                            <p>Wall-E</p>
+                          </div>
+                        </div>
+
+                        <div class="box">
+                          <img src="./사진/영화/월터의 상상은 현실이 된다.png" alt="영화8">
+                          <div class="mv_info">
+                            <p>월터의 상상은 현실이 된다</p>
+                          </div>
+                        </div>
+
+                        <div class="box">
+                          <img src="./사진/영화/해리포터.png" alt="영화9">
+                          <div class="mv_info">
+                            <p>Harry Potter</p>
+                          </div>
+                        </div>
+
+                      </div>
+                    </div>
+                  
+                </div>
+            </div>
+
+            <!-- 개발자 로드맵 -->
+            <div id="roadmap">
+                <div id="roadmapTitle">
+                    <h3>Road Map</h3>
+                </div>
+             <div class="fullstack" onclick="foo();">
+                  <ul class="frontend">
+                    <li>
+                      <ul class="ld_ul">
+                        <li>Internet</li>
+                        <li class="ld_img"><a href="http://web.stanford.edu/class/msande91si/www-spr04/readings/week1/InternetWhitepaper.htm" target='_blank'>
+                          <img src="./사진/로드맵/인터넷.png" alt="인터넷"></a></li>
+                      </ul>
+                    </li>             
+                    <li>
+                      <ul class="ld_ul">
+                        <li>HTML|CSS|javascript</li>
+                        <li class="ld_img"><a href="https://www.w3schools.com/" target="_blank">
+                          <img src="./사진/로드맵/html.png" alt="인터넷"></a></li>
+                      </ul>
+                    </li>
+                    <li>
+                      <ul class="ld_ul">
+                        <li>Framework</li>
+                        <li class="ld_img"><a href="https://vuejs.org/guide/introduction.html" target="_blank">
+                          <img src="./사진/로드맵/vue.png" alt="인터넷"></a> </li>
+                      </ul>
+                    </li>
+                    <li>
+                      <ul class="ld_ul">
+                        <li>MobileApp</li>
+                        <li class="ld_img"><a href="https://cyberx.tistory.com/206" target="_blank">
+                          <img src="./사진/로드맵/electron.png" alt="인터넷"></a> </li>
+                      </ul>
+                    </li>
+                  </ul>
+                  <ul class="backend">
+                    <li>
+                      <ul class="ld_ul">
+                        <li>Language</li>
+                        <li class="ld_img"><a href="https://docs.python.org/ko/3/tutorial/index.html" target="_blank">
+                          <img src="./사진/로드맵/python.png" alt="인터넷"></a> </li>
+                      </ul>
+                    </li>
+                    <li>
+                      <ul class="ld_ul">
+                        <li>Relational DB</li>
+                        <li class="ld_img"><a href="https://leetcode.com/problemset/database/" target="_blank">
+                          <img src="./사진/로드맵/mysql.png" alt="인터넷"></a> </li>
+                      </ul>
+                    </li>
+                    <li>
+                      <ul class="ld_ul">
+                        <li>Version Control System</li>
+                        <li class="ld_img"><a href="https://backlog.com/git-tutorial/kr/" target="_blank">
+                          <img src="./사진/로드맵/Git.png" alt="인터넷"></a> </li>
+                      </ul>
+                    </li>
+                    <li>
+                      <ul class="ld_ul">
+                        <li>Framework</li>
+                        <li class="ld_img"><a href="https://docs.djangoproject.com/ko/4.0/intro/" target="_blank">
+                          <img src="./사진/로드맵/Django.png" alt="인터넷"></a> </li>
+                      </ul>
+                    </li>
+                  </ul>
+                </div>
+            </div>
+ 
+            <!-- 회원가입 -->
+            <div id="signup">
+                <div id="signupTitle">
+                    <h3>회원가입</h3>
+                </div>
+  
+                <form action="javascript:saveMemberbook();" name="memberFrm" id="memberFrm">
+                  <table id="enroll">
+                    <tr>
+                      <th>아이디<span class="req">*</span></th>
+                      <td>
+                        <input type="text" name="userId" id="userId" placeholder="영소문자, 숫자포함 4~12글자" />
+                      </td>
+                    </tr>
+                    <tr>
+                      <th>비밀번호<span class="req">*</span></th>
+                      <td>
+                        <input type="password" name="pwd" id="pwd" placeholder="숫자/문자 포함 8~15자리" />
+                      </td>
+                    </tr>
+                    <tr>
+                      <th>비밀번호확인</th>
+                      <td>
+                        <input type="password" id="pwdCheck" placeholder="비밀번호를 한 번 더 입력해주세요" />
+                      </td>
+                    </tr>
+                    <tr>
+                      <th>이름<span class="req">*</span></th>
+                      <td>
+                        <input type="text" name="userName" id="userName" placeholder="한글 2글자 이상 입력해주세요"/>
+                      </td>
+                    </tr>
+                    <tr>
+                      <th>이메일<span class="req">*</span></th>
+                      <td>
+                        <input type="email" name="email" id="email" placeholder="예시 : abc123@naver.com"/>
+                      </td>
+                    </tr>
+                    <tr>
+                      <th>전화번호<span class="req">*</span></th>
+                      <td>
+                        <input type="text" name="phone" id="phone" class="phone" placeholder="핸드폰 번호를 입력해주세요"/>           
+                      </td>
+                    </tr>
+                    <tr>
+                      <th>좋아하는 영화</th>
+                      <td>
+                        <input type="text" name="movie1" id="movie1" class="movie1" placeholder="좋아하는 영화를 하나 입력해주세요" />         
+                      </td>
+                    </tr>
+                    <tr>
+                      <th>취미</th>
+                      <td>
+                        <input type="checkbox" name="hobby" id="hobby1" value="reading" />
+                        <label class="ck_l" for="hobby1">독서</label>
+                        <input
+                          type="checkbox"
+                          name="hobby"
+                          id="hobby2"
+                          value="development"
+                        />
+                        <label for="hobby2">개발</label>
+                        <input type="checkbox" name="hobby" id="hobby3" value="exercise" />
+                        <label class="ck_l" for="hobby3">운동</label>
+                        <input type="checkbox" name="hobby" id="hobby4" value="game" />
+                        <label class="ck_l" for="hobby4">게임</label>
+                        <input type="checkbox" name="hobby" id="hobby5" value="movie" />
+                        <label class="ck_l" for="hobby5">영화</label>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td colspan="2" class="btn-wrapper">
+                        <input class="btn grey" type="reset" value="초기화" />
+                        <input class="btn" type="submit" value="제출" />&nbsp;                        
+                      </td>
+                    </tr>
+                  </table>
+                </form>
+            </div>
+
+            <!-- 회원조회 -->
+            <div id="memberlist">
+                <div id="memberTitle">
+                    <h3>Member List</h3>
+                  </div>
+                  
+                  <div class="search_btn">                    
+                    <button class="btn" id="search">조회하기</button>
+                  </div>
+                  
+                  <table id="tb-memberlist" class="search">
+                    <thead>
+                      <tr>
+                        <th>No</th>
+                        <th>아이디</th>
+                        <th>이름</th>
+                        <th>이메일</th>
+                        <th>전화번호</th>
+                        <th>좋아하는 영화</th>
+                        <th>가입일시</th>
+                      </tr>
+                    </thead>
+                    <tbody></tbody>
+                  </table>                  
+            </div>
+
+
+            <!-- 로그인 -->
+            <div id="login">
+              <div id="loginTitle">
+                <h3>Log in</h3>
+              </div>
+
+              <form action="javascript:login();" name="login" id="loginFrm">
+                <table id="tb-login">
+                    <tr>
+                        <th><label for="login_id">아이디</label></th>
+                        <td><input type="text" id="login_id" placeholder="아이디를 입력하세요"></td>
+                    </tr>
+                    <tr>
+                      <th><label for="login_pwd">비밀번호</label></th>
+                      <td><input type="password" id="login_pwd" placeholder="비밀번호를 입력하세요"></td>
+                  </tr>
+                  <tr>
+                      <td colspan="2" style="text-align: center;">
+                          <button id="btn_login">로그인</button>
+                      </td>
+                  </tr>
+                </table>
+              </form>
+            </div>
+          <!-- <script>
+            const loginBtn = document.querySelector("#btn_login");
+
+            function CheckValue(){
+                const keyVal = login_id.value;  //사용자 키 입력값
+                const value = localStorage.getItem(keyVal);   //저장된 value
+                
+                if(value == document.querySelector("#login_pwd").value){
+                    alert('로그인 성공🙂');
+                    login_id.value = '';
+                    document.querySelector("#login_pwd").value = '';
+                }
+                else {
+                    alert(`${keyVal}님 비밀번호가 일치하지 않습니다😥`);
+                    login_id.value = '';
+                    document.querySelector("#login_pwd").value = '';
+                }
+            }
+
+            function login(){
+                loginBtn.addEventListener("click", CheckValue);
+            }
+        </script> -->
+
+        </main>
+<hr>
+        <!-- footer -->
+        <footer>
+          <ul>
+            <li><p>copyright ⓒ 2022 All rights reserved by leeyounjeong.</p></li>
+          </ul>
+        </footer>
+
+    </div>
+    <script src="./1.js"></script>
+</body>
+</html>

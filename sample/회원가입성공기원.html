@@ -1,0 +1,464 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>회원가입 성공기원</title>
+    <style>
+        main > div#signup {
+    min-height: 700px;
+    background-color: rgb(250 235 215);
+    padding-bottom: 100px;
+}
+div#signupTitle {
+    padding: 25px;
+    font-size: 50px;
+    display: block;
+    text-align: center;
+    background-color: #fab297b8;
+    margin-bottom: 40px;
+}
+#signup > form{
+    display: flex;
+    justify-content: center;
+}
+table#enroll {
+    border: 1px solid;
+    border-spacing: 10px;
+    width: 700px;
+    height: 600px;
+    margin: 0 auto;
+}
+table#enroll th {
+text-align: right;
+min-width:130px;
+}
+table#enroll td.btn-wrapper {
+text-align: center;
+}
+.btn, #btn_login{
+    display:inline-block;
+    width:auto;
+    min-width:120px;
+    background:#000;
+    color:#fff;
+    height:40px;
+    border-radius: 50px;
+}
+
+.btn.grey {
+    background:#666;
+    border:0;
+}
+
+table#enroll span.req {
+color: red;
+}
+table#enroll {
+border : 1px solid #000;
+border-collapse: collapse;
+margin: 10px 0;
+}
+table#enroll tr {
+   font-size: 20px;
+   vertical-align: none;
+   text-align: center; 
+   box-sizing: border-box;
+}
+table#enroll th, td {
+    text-align: center;
+    align-items: center;
+    border : 1px solid #000;
+    padding: 5px;
+    line-height:62px;
+    box-sizing: border-box;
+}
+/* main > div#tb-memberlist {
+    min-height: 500px;
+    background-color: rgb(250 235 215);
+} */
+div#memberTitle {
+    padding: 25px;
+    font-size: 50px;
+    display: block;
+    text-align: center;
+    background-color: #fab297b8;
+    margin-bottom: 40px;
+}
+.search_btn{
+    display: flex;
+    justify-content: center;
+    margin-bottom: 30px;
+}
+
+table#tb-memberlist {
+    justify-content: center;
+    margin: auto;
+}
+table#tb-memberlist tr {
+    font-size: 20px;
+    vertical-align: none;
+    text-align: center; 
+}
+
+table#tb-memberlist th, td {
+    text-align: center;
+    align-items: center;
+    border : 1px solid #000;
+    padding: 5px;
+}
+
+table#enroll th, td input {
+    width:calc(100% - 20px);
+    height:40px;
+}
+table#enroll input[type=checkbox]{
+    width:30px;
+    height:30px;
+    margin-top:20px;
+}
+
+table#enroll th, td .ck_l {
+    margin-top:-20px;
+}
+
+table#tb-memberlist.search th {
+    width:80px;
+    line-height:41px;
+}
+
+/* 로그인 스타일 */
+        table#tb-login {
+            border : 1px solid #000;
+            border-collapse: collapse;
+            margin: 10px 0;
+        }
+        table#tb-login th, td {
+            border : 1px solid #000;
+            padding: 5px;
+        }
+        /* #btn_login{
+            display: inline-block;
+    width: auto;
+    min-width: 120px;
+    background: #000;
+    color: #fff;
+    height: 40px;
+    border-radius: 50px;
+        } */
+
+    </style>
+</head>
+
+<body>
+    <div id="signup">
+        <div id="signupTitle">
+            <h3>회원가입</h3>
+        </div>
+
+        <form action="javascript:saveMemberbook();" name="memberFrm" id="memberFrm">
+            <table id="enroll">
+                <tr>
+                    <th>아이디<span class="req">*</span></th>
+                    <td>
+                        <input type="text" name="userId" id="userId" />
+                    </td>
+                </tr>
+                <tr>
+                    <th>비밀번호<span class="req">*</span></th>
+                    <td>
+                        <input type="password" name="pwd" id="pwd" />
+                    </td>
+                </tr>
+                <tr>
+                    <th>비밀번호확인</th>
+                    <td>
+                        <input type="password" id="pwdCheck" />
+                    </td>
+                </tr>
+                <tr>
+                    <th>이름<span class="req">*</span></th>
+                    <td>
+                        <input type="text" name="userName" id="userName" />
+                    </td>
+                </tr>
+                <tr>
+                    <th>이메일<span class="req">*</span></th>
+                    <td>
+                        <input type="email" name="email" id="email" />
+                    </td>
+                </tr>
+                <tr>
+                    <th>전화번호<span class="req">*</span></th>
+                    <td>
+                        <input type="text" name="phone" id="phone" class="phone" />           
+                    </td>
+                </tr>
+                <tr>
+                    <th>좋아하는 영화</th>
+                    <td>
+                        <input type="text" name="moive1" id="moive1" class="moive1" />         
+                    </td>
+                </tr>
+                <tr>
+                    <th>취미</th>
+                    <td>
+                        <input type="checkbox" name="hobby" id="hobby1" value="reading" />
+                        <label class="ck_l" for="hobby1">독서</label>
+
+                        <input type="checkbox" name="hobby"id="hobby2" value="development" />
+                        <label for="hobby2">개발</label>
+                        
+                        <input type="checkbox" name="hobby" id="hobby3" value="exercise" />
+                        <label class="ck_l" for="hobby3">운동</label>
+                        
+                        <input type="checkbox" name="hobby" id="hobby4" value="game" />
+                        <label class="ck_l" for="hobby4">게임</label>
+                        
+                        <input type="checkbox" name="hobby" id="hobby5" value="movie" />
+                        <label class="ck_l" for="hobby5">영화</label>
+                    </td>
+                </tr>
+                <tr>
+                    <td colspan="2" class="btn-wrapper">
+                        <input class="btn grey" type="reset" value="초기화" />
+                        <input class="btn" type="submit" value="제출" />&nbsp;                        
+                    </td>
+                </tr>
+            </table>
+        </form>
+
+        <script>
+            //유효성검사
+            //비밀번호 일치여부 검사
+            function isEqualPwd() {
+                if (pwd.value == pwdCheck.value) {
+                return true;
+                } else {
+                alert("비밀번호가 일치하지 않습니다.");
+                pwd.select();
+                return false;
+                }
+            }
+            document.querySelector("#pwdCheck").onblur = isEqualPwd;
+
+            //테스트
+            function regExpTest(regExp, el, msg) {
+                if (regExp.test(el.value)) return true;
+                alert(msg);
+                el.value = "";
+                el.focus();
+                return false;
+            }
+          
+            document.memberFrm.onsubmit = function () {
+                const userId = document.getElementById("userId");
+                const pwd = document.getElementById("pwd");
+                const pwdCheck = document.getElementById("pwdCheck");
+                const userName = document.getElementById("userName");
+                const email = document.getElementById("email");
+                const phone = document.getElementById("phone");
+
+
+            //아이디 검사
+                //첫글자는 반드시 영소문자로 이루어지고,
+                //숫자가 하나이상 포함되어야함.
+                //아이디의 길이는 4~12글자사이
+            const regExp1 = /^[a-z][a-z\d]{3,11}$/;
+            const regExp2 = /[0-9]/;
+                if(!regExpTest(regExp1
+                        ,userId
+                        ,"아이디는 영소문자로 시작하는 4~12글자입니다."))
+                    return false;
+                if(!regExpTest(regExp2
+                            ,userId
+                            ,"아이디는 숫자를 하나이상 포함하세요."))
+                    return false;
+
+
+
+            //비밀번호 검사
+                //숫자/문자/ 포함 형태의 8~15자리 이내의 암호 정규식
+                //전체길이검사 /^.{8,15}$/
+                //숫자하나 반드시 포함 /\d/
+                //영문자 반드시 포함 /[a-zA-Z]/
+
+            const regExpArr = [/^.{8,15}$/, /\d/, /[a-zA-Z]/];
+
+            for (let i = 0; i < regExpArr.length; i++) {
+                if (
+                    !regExpTest(regExpArr[i], pwd,"비밀번호는 8~15자리 숫자/문자를 포함해야합니다.")
+                ) {
+                    return false;
+                }
+            };
+
+            //비밀번호일치여부
+            if (!isEqualPwd()) {
+            return false;
+            }
+            
+            //3.이름검사
+            //한글2글자 이상만 허용.
+                const regExp3 = /^[가-힣]{2,}$/;
+                if (!regExpTest(regExp3, userName, "이름은 한글2글자이상 입력하세요."))
+                return false;
+
+            //5.이메일 검사
+            // 4글자 이상(\w = [a-zA-Z0-9_], [\w-\.]) @가 나오고
+            // 1글자 이상(주소). 글자 가 1~3번 반복됨
+                if (
+                    !regExpTest(/^[\w]{4,}@[\w]+(\.[\w]+){1,3}$/, email, "이메일 형식에 어긋납니다.")
+                )
+                return false;
+
+            
+            //6. 전화번호 검사
+            if(!regExpTest(/^01([0|1|6|7|8|9])-?([0-9]{3,4})-?([0-9]{4})$/, phone, "핸드폰 번호를 입력해주세요."))    
+                return false;
+            };
+        </script>
+
+
+
+
+        <!-- 방명록 -->
+        <form action="javascript:renderMemberbook();">
+            <div class="search_btn">                    
+                <button class="btn" id="search">조회하기</button>
+            </div>
+        </form>
+      
+        <table id="tb-memberlist" class="search">
+            <thead>
+                <tr>
+                    <th>No</th>
+                    <th>아이디</th>
+                    <th>이름</th>
+                    <th>이메일</th>
+                    <th>전화번호</th>
+                    <th>좋아하는 영화</th>
+                    <th>가입일시</th>
+                </tr>
+            </thead>
+            <tbody></tbody>
+        </table>
+
+        <script>
+            // window.onload = () => renderMemberbook();
+             search.onclick = () => renderMemberbook(); 
+
+            class Memberbook{
+                constructor(userId, userName, email, phone, movie1, datetime = Date.now()){
+                    this.userId = userId;
+                    this.userName = userName;
+                    this.email = email;
+                    this.phone = phone;
+                    this.movie1 = movie1;
+                    this.datetime = datetime;
+                };
+            };
+
+            //방명록 저장하기
+            const saveMemberbook = () => {
+                const userIdVal = userId.value;
+                const userNameVal = userName.value;
+                const emailVal = email.value;
+                const phoneVal = phone.value;
+                const movie1Val = movie1.value;
+                const passwordVal = pwd.value;
+
+                //로그인위해서 key,value값 저장
+                localStorage.setItem(userIdVal,passwordVal);
+
+                const memberbook = new Memberbook(userIdVal, userNameVal, emailVal, phoneVal);
+
+                const memberbooks = JSON.parse(localStorage.getItem("memberbooks")) || [];
+                memberbooks.push(memberbook);
+
+                const data = JSON.stringify(memberbooks);
+
+                localStorage.setItem('memberbooks', data);
+
+                document.memberFrm.reset();
+
+                // renderMemberbook(memberbooks);
+            };
+
+            const renderMemberbook = (memberbooks = JSON.parse(localStorage.getItem('memberbooks'))) => {
+                if(!memberbooks) return;
+                const tbody = document.querySelector("#tb-memberlist tbody");
+                tbody.innerHTML = "";
+                console.log(tbody);
+                memberbooks   
+                    .map((memberbook, index) => {
+                        const {userId, userName, email, phone, movie1, datetime} = memberbook;
+                        return `<tr>
+                            <td>${index + 1}</td>
+                            <td>${userId}</td>
+                            <td>${userName}</td>
+                            <td>${email}</td>
+                            <td>${phone}</td>
+                            <td>${movie1}</td>
+                            <td>${datetimeFormatter(datetime)}</td>
+                            </tr>`;      
+                    }).forEach((tr) => {
+                        console.log(tr);
+                        tbody.innerHTML += tr;
+                    });
+            };
+
+            const datetimeFormatter = (millis) => {
+                const d = new Date(millis);
+                const f = (n) => n < 10? '0'+ n : n; 
+                const yyyy = d.getFullYear();
+                const mm = f(d.getMonth() + 1);
+                const dd = f(d.getDay());
+                const hh = f(d.getHours());
+                const mi = f(d.getMinutes());
+                return `${yyyy}/${mm}/${dd}/${hh}:${mi}`;
+            };
+
+        </script>
+
+
+        <!-- 로그인기능 -->
+        <form action="javascript:login();" name="login">
+            <table id="tb-login">
+                <tr>
+                    <th><label for="login_id">아이디</label></th>
+                    <td><input type="text" id="login_id" placeholder="아이디를 입력하세요"></td>
+                </tr>
+                <tr>
+                   <th><label for="login_pwd">비밀번호</label></th>
+                   <td><input type="password" id="login_pwd" placeholder="비밀번호를 입력하세요"></td>
+               </tr>
+               <tr>
+                   <td colspan="2" style="text-align: center;">
+                       <button id="btn_login">로그인</button>
+                   </td>
+               </tr>
+            </table>
+        </form>
+        <script>
+            const loginBtn = document.querySelector("#btn_login");
+            function CheckValue(){
+                const keyVal = login_id.value;  //사용자 키 입력값
+                const value = localStorage.getItem(keyVal);   //저장된 value
+                
+                if(value == document.querySelector("#login_pwd").value){
+                    alert('로그인 성공🙂');
+                }
+                else {
+                    alert(`${keyVal}님 비밀번호가 일치하지 않습니다😥`);
+                    id.select();   //초기화처리
+                }
+            }
+
+            function login(){
+                loginBtn.addEventListener("click", CheckValue);
+            }
+        </script>
+</body>
+</html>

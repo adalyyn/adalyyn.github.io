@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>leeyounjeong</title>
+    <link rel="stylesheet" href="./style_2.css">
+</head>
+<body>
+    <div class="container">
+        <!-- 헤더부분 -->
+        <header>
+            <div class="header">
+                <img src="../프로젝트/사진/KakaoTalk_20220511_140552788.jpg">
+                <h1 id="logo">Hello World~!</h1>
+            </div>
+            <nav>
+                <ul class="menu">
+                    <li><a href="#introduce">About Me</a></li>
+                    <li><a href="#hobby">My favorites</a></li>
+                    <li><a href="#roadmap">Dev Roadmap</a></li>
+                    <li><a href="#signup">Sign up</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+            </nav>
+        </header>
+
+        <!-- 메인부분 -->
+        <main>
+            <!-- 자기소개 -->
+            <div id="introduce">
+                <div id="introduceTitle">
+                    <h3>About me</h3>
+                </div>
+                <div id ="introduceContent">
+                    <div id="selfImg"><img src="/프로젝트/사진/KakaoTalk_20220511_140552788.jpg" alt="이윤정"></div>
+                    <div id="selfText">
+                        <span>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ea quibusdam voluptates harum beatae aut ipsa eveniet obcaecati, dolorum temporibus. Explicabo sunt eveniet impedit voluptatem tenetur voluptatibus nam deserunt veniam labore.</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 취미소개 -->
+            <div id="hobby">
+                <div id="hobbyTitle">
+                    <h3>My Favorite</h3>
+                </div>
+
+                <div id="hobbyContent">
+                    <h3>운동</h3>
+                    <div id="h1">
+                      <div class="running"></div>
+                      <div class="hiking"></div>
+                      <div class="crossfit"></div>
+                    </div>
+                    <br><br><br>
+
+                    <h3>독서</h3>
+                    <div id="h2">
+                      <div class="reading">
+                        <img src="./사진/보건교사 안은영.png" alt="책1">
+                        <img src="./사진/보건교사 안은영.png" alt="책2">
+                        <img src="./사진/보건교사 안은영.png" alt="책3">
+                      </div>
+                    </div>
+
+                    <br><br><br>
+                    <h3>영화</h3>
+                    <div id="h3">
+                      <div class="movie">
+                        <img src="./사진/월터의 상상은 현실이 된다.png" alt="영화1">
+                        <img src="./사진/월터의 상상은 현실이 된다.png" alt="영화2">
+                        <img src="./사진/월터의 상상은 현실이 된다.png" alt="영화3">
+                        <img src="./사진/월터의 상상은 현실이 된다.png" alt="영화4">
+                        <img src="./사진/월터의 상상은 현실이 된다.png" alt="영화5">
+                        <img src="./사진/월터의 상상은 현실이 된다.png" alt="영화6">
+                      </div>
+                    </div>
+                    <br><br><br>
+                </div>
+            </div>
+
+            <!-- 개발자 로드맵 -->
+            <div id="roadmap">
+                <div id="roadmapTitle">
+                    <h3>Road Map</h3>
+                </div>
+
+                <div class="fullstack">
+                  <ul class="frontend">
+                    <li>Internet</li>
+                    <li>HTML|CSS|javascript</li>
+                    <li>Framework</li>
+                    <li>MobileApp</li>
+                  </ul>
+                  <ul class="backend">
+                    <li>Language</li>
+                    <li>Relational DB</li>
+                    <li>Version Control System</li>
+                    <li>Framework</li>
+                  </ul>
+                </div>
+            </div>
+
+
+            <!-- 회원가입 -->
+            <div id="signup">
+                <div id="signupTitle">
+                    <h3>회원가입</h3>
+                </div>
+                <br><br><br><br><br>
+
+                <form action="javascript:alert('제출성공');" name="memberFrm">
+                    <table id="enroll">
+                      <tr>
+                        <th>아이디<span class="req">*</span></th>
+                        <td>
+                          <input type="text" name="userId" id="userId" /><br><br>
+                        </td>
+                      </tr>
+                      <tr>
+                        <th>비밀번호<span class="req">*</span></th>
+                        <td>
+                          <input type="password" name="pwd" id="pwd" /><br><br>
+                        </td>
+                      </tr>
+                      <tr>
+                        <th>비밀번호확인</th>
+                        <td>
+                          <input type="password" id="pwdCheck" /><br><br>
+                        </td>
+                      </tr>
+                      <tr>
+                        <th>이름<span class="req">*</span></th>
+                        <td>
+                          <input type="text" name="userName" id="userName" /><br><br>
+                        </td>
+                      </tr>
+                      <tr>
+                        <th>주민번호<span class="req">*</span></th>
+                        <td>
+                          <input type="text" name="ssn1" id="ssn1" class="short" />-
+                          <input type="password" name="ssn2" id="ssn2" class="short" /><br><br>
+                        </td>
+                      </tr>
+                      <tr>
+                        <th>이메일<span class="req">*</span></th>
+                        <td>
+                          <input type="email" name="email" id="email" /><br><br>
+                        </td>
+                      </tr>
+                      <tr>
+                        <th>전화번호<span class="req">*</span></th>
+                        <td>
+                          <!-- input:text[name=tel$]#tel$.phone*3 -->
+                          <input type="text" name="tel1" id="tel1" class="phone" />-
+                          <input type="text" name="tel2" id="tel2" class="phone" />-
+                          <input type="text" name="tel3" id="tel3" class="phone" /><br><br>
+                        </td>
+                      </tr>
+                      <tr>
+                        <th>직업</th>
+                        <td>
+                          <select name="job" id="job">
+                            <option value="공무원">공무원</option>
+                            <option value="개발자">개발자</option>
+                            <option value="무직">무직</option>
+                          </select><br><br>
+                        </td>
+                      </tr>
+                      <tr>
+                        <th>취미</th>
+                        <td>
+                          <!-- (input:checkbox#hobby$[name=hobby]+label[for=hobby$])*5 -->
+                          <input type="checkbox" name="hobby" id="hobby1" value="reading" />
+                          <label for="hobby1">독서</label>
+                          <input
+                            type="checkbox"
+                            name="hobby"
+                            id="hobby2"
+                            value="development"
+                          />
+                          <label for="hobby2">개발</label>
+                          <input type="checkbox" name="hobby" id="hobby3" value="exercise" />
+                          <label for="hobby3">운동</label>
+                          <input type="checkbox" name="hobby" id="hobby4" value="game" />
+                          <label for="hobby4">게임</label>
+                          <input type="checkbox" name="hobby" id="hobby5" value="movie" />
+                          <label for="hobby5">영화</label><br><br>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td colspan="2" class="btn-wrapper">
+                          <input type="submit" value="제출" />&nbsp;
+                          <input type="reset" value="초기화" />
+                        </td>
+                      </tr>
+                    </table>
+                  </form>
+            </div>
+
+            <!-- 이메일보내기 -->
+            <div id="contact">
+                <div id="signupTitle">
+                    <h3>Contact</h3>
+                </div>
+            </div>
+        </main>
+
+        <!-- footer -->
+        <footer>
+
+        </footer>
+
+        <!-- adress -->
+        <address>
+
+        </address>
+    </div>
+</body>
+</html>

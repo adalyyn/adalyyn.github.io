@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #modal.modal-overlay {
+            width: 100%;
+            height: 100%;
+            position: absolute;
+            left: 0;
+            top: 0;
+            display: none;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            background: rgba(255, 255, 255, 0.25);
+            box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+            backdrop-filter: blur(1.5px);
+            -webkit-backdrop-filter: blur(1.5px);
+            border-radius: 10px;
+            border: 1px solid rgba(255, 255, 255, 0.18);
+        }
+        #modal .modal-window {
+            background: rgba( 69, 139, 197, 0.70 );
+            box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37 );
+            backdrop-filter: blur( 13.5px );
+            -webkit-backdrop-filter: blur( 13.5px );
+            border-radius: 10px;
+            border: 1px solid rgba( 255, 255, 255, 0.18 );
+
+            width: 400px;
+            height: 500px;
+            position: relative;
+            top: -100px;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+        }
+        #modal .title {
+            padding-left: 10px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            text-shadow: 1px 1px 2px gray;
+            color: white;
+            flex-direction: column;
+            align-content: space-around;
+            
+        }
+        #modal .title h2 {
+            display: inline;
+            text-align: center;
+        }
+        #modal .close-area {
+            display: flex;
+            justify-content: flex-end;
+            align-items: center;
+            float: right;
+            padding: 10px 20px;
+            cursor: pointer;
+            text-shadow: 1px 1px 2px gray;
+            color: white;
+        }
+        
+        #modal .content {
+            margin-top: 20px;
+            padding: 0px 10px;
+            text-shadow: 1px 1px 2px gray;
+            color: white;
+            display: flex;
+            flex-wrap: nowrap;
+            flex-direction: column;
+            align-items: center;
+        }
+    </style>
+</head>
+<body>
+    <div id="container">
+        <img src="./사진/보건교사 안은영.png" alt="1" id="btn-modal">
+    </div>
+
+    <div id="modal" class="modal-overlay">
+        <div class="modal-window">
+            <div class="close-area">X</div>
+            <div class="title">
+                <h2>월터의</h2>
+                <!-- <img src="./사진/월터의 상상은 현실이 된다.png" alt="사진" style="width: 200px; height: 200px;"> -->
+            </div>
+            <div class="content">
+                <p>기억에 남는 대사</p>
+  
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // const loremIpsum = document.getElementById("lorem-ipsum")
+        // fetch("https://baconipsum.com/api/?type=all-meat&paras=200&format=html")
+        //     .then(response => response.text())
+        //     .then(result => loremIpsum.innerHTML = result)
+
+        const modal = document.getElementById("modal")
+        
+        //특정버튼 누르면 모달창켜지게 하기. display:flex 로
+        function modalOn() {
+            modal.style.display = "flex"
+        }
+        function isModalOn() {
+            return modal.style.display === "flex"
+        }
+
+        //모달창 꺼지는 함수
+        function modalOff() {
+            modal.style.display = "none"
+        }
+        const btnModal = document.getElementById("btn-modal")
+        btnModal.addEventListener("click", e => {
+            modalOn()
+        })
+
+        //모달창의 클로즈 버틍 누르면 모달창 꺼지게하기
+        const closeBtn = modal.querySelector(".close-area")
+        closeBtn.addEventListener("click", e => {
+            modalOff()
+        })
+
+        /**
+         //모달창 바깥 영역을 클릭하면 모달창이 꺼지게 하기
+         * 모달창 외의 영역을 클릭하면 이벤트 타깃 요소에 modal-overlay클래스가 있으므로 종료
+         * 모달창을 클릭하면 이벤트 타깃 요소에 modal-overlay 가 없기 떄문에 종료하지 않음
+         */
+        modal.addEventListener("click", e => {
+            const evTarget = e.target
+            if(evTarget.classList.contains("modal-overlay")) {
+                modalOff()
+            }
+        })
+
+        //모달창 켜진 상태에서 ESC버튼을 누르면 모달창이 꺼지게 하기
+        window.addEventListener("keyup", e => {
+            if(isModalOn() && e.key === "Escape") {
+                modalOff()
+            }
+        })
+    </script>
+</body>
+</html>

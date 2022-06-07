@@ -1,0 +1,204 @@
+@import "reset.css";
+
+@import url('https://fonts.googleapis.com/css2?family=Gothic+A1:wght@100&family=Jua&display=swap');
+
+
+header .header img {
+    width: 100px;
+    height: 100px;
+    margin-left: 20px;
+    border-radius: 50%;
+    display: inline;
+}
+h1#logo {
+    color: rgba(16, 20, 247, 0.984);
+    align-items: center;
+}
+a {
+    color: inherit;
+    text-decoration: none;
+}
+li {
+    list-style: none;
+}
+h1, h2, h3, h4, h5, h6 {
+    font-style: inherit;
+}
+a:hover {
+    text-decoration: none;
+    color: inherit;
+}
+
+
+body {
+    font-family: 'Jua', sans-serif;
+    font-size: 15px;
+    background-color: white;
+}
+.container {
+    width: 1440px;
+    margin: 0;
+}
+
+.header {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    background-color: lightgray;
+}
+.header > h1 {
+    font-size: 50px;
+    margin-left: 20px;
+}
+
+header > nav {
+    position: sticky;
+    top: 0px;
+    z-index: 999;
+}
+header nav .menu {
+    background-color: rgba(249, 153, 118, 0.758);
+    width: inherit;
+    height: 40px;
+    margin: 0 100px;
+    font-size: 30px;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+}
+
+.header ul {
+	width:100%;
+	height: 100%;
+	display: flex;
+	justify-content: space-between;
+}
+.header ul > li {
+	font-size:20px;
+	height: 100%;
+	display: flex;
+    flex-wrap: wrap;
+	align-items: center;
+}
+
+
+/* main */
+main {
+    background-color: antiquewhite;
+    min-height: 700px;
+}
+
+/* 1. 자기소개 부분 */
+div#introduceTitle{
+    padding: 20px;
+    font-size: 30px;
+    display: block;
+    text-align: center;
+}
+main > div#introduce> div#introduceContent{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    flex-wrap: nowrap;
+    align-items: center;
+    color: green;
+}
+main > div#introduce img {
+    padding: 50px;
+    width: 500px;
+    height: 500px;
+    border-radius: 50%;
+}
+/* 자기소개내용 */
+div#selfText {
+    font-size: 30px;
+}
+
+
+
+
+/* 취미 */
+main > div#hobby {
+    min-height: 700px;
+    background-color: rgba(201, 167, 233, 0.87);
+}
+div#hobbyTitle{
+    padding: 20px;
+    font-size: 30px;
+    display: block;
+    text-align: center;
+}
+#hobbyContent > div {
+    width: inherit;
+    min-height: 300px;
+    border: 1px solid black;
+}
+#hobbyContent h3{
+    font-size: 20px;
+    display: block;
+}
+#hobbyContent #h1{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center;
+}
+#hobbyContent #h1 img{
+    width: 100px;
+    height: 100px;
+    margin-left: 20px;
+    border-radius: 50%;
+    display: flex;
+}
+
+
+
+/* 로드맵 */
+main > div#roadmap {
+    min-height: 700px;
+    background-color: rgba(209, 234, 27, 0.393);
+}
+div#roadmapTitle {
+    padding: 20px;
+    font-size: 30px;
+    display: block;
+    text-align: center;
+}
+
+
+
+
+/* 회원가입 */
+main > div#signup {
+    min-height: 700px;
+    background-color: rgb(132, 209, 150);
+}
+div#signupTitle {
+    padding: 20px;
+    font-size: 30px;
+    display: block;
+    text-align: center;
+}
+#signup > form{
+    display: flex;
+    justify-content: center;
+}
+
+
+
+/* 이메일보내기 */
+main > div#contact {
+    min-height: 700px;
+    background-color: rgb(82, 163, 182);
+}
+
+
+
+
+/* footer */
+footer {
+    background-color: darkgray;
+    height: 300px;
+}
